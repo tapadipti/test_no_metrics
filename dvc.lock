@@ -34,3 +34,20 @@ stages:
     - path: metrics.json
       md5: 800e77afcd82d94ed5000cbb344cf337
       size: 60
+  stage3:
+    cmd: python src/stage3.py
+    deps:
+    - path: src/stage3.py
+      md5: f80dc1eb1270879ce8992f5fca20546b
+      size: 270
+    params:
+      params.yaml:
+        train.batch_size: 128
+        train.dropout: 0.4
+        train.hidden_units: 64
+        train.lr: 0.01
+        train.num_epochs: 3
+    outs:
+    - path: stage3_metrics.json
+      md5: 800e77afcd82d94ed5000cbb344cf337
+      size: 60

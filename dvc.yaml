@@ -25,3 +25,15 @@ stages:
     metrics:
     - metrics.json:
         cache: false
+  stage3:
+    cmd: python src/stage3.py
+    deps:
+    - src/stage3.py
+    params:
+    - train.batch_size
+    - train.dropout
+    - train.hidden_units
+    - train.lr
+    - train.num_epochs
+    metrics:
+    - stage3_metrics.json
