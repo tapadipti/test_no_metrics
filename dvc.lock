@@ -17,3 +17,20 @@ stages:
     - path: countries.csv
       md5: ff4ba4b5d7bae856f212bf5328bc8cd2
       size: 155
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: src/evaluate.py
+      md5: 771e5a1f37f9e301ecc9d39d50f79fa1
+      size: 263
+    params:
+      params.yaml:
+        train.batch_size: 128
+        train.dropout: 0.4
+        train.hidden_units: 64
+        train.lr: 0.01
+        train.num_epochs: 3
+    outs:
+    - path: metrics.json
+      md5: 800e77afcd82d94ed5000cbb344cf337
+      size: 60

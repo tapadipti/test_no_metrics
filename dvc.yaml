@@ -12,3 +12,16 @@ stages:
     metrics:
     - countries.csv:
         cache: false
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - src/evaluate.py
+    params:
+    - train.batch_size
+    - train.dropout
+    - train.hidden_units
+    - train.lr
+    - train.num_epochs
+    metrics:
+    - metrics.json:
+        cache: false
