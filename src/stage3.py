@@ -1,7 +1,7 @@
 import json
 
 # Data to be written
-dictionary = {"loss": 0.3, "accuracy": 0.8}
+dictionary = {"loss": 0.4, "accuracy": 0.8}
 
 # Serializing json
 json_object = json.dumps(dictionary)

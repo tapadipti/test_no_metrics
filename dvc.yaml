@@ -10,7 +10,7 @@ stages:
     - train.lr
     - train.num_epochs
     metrics:
-    - countries.csv:
+    - metrics_train.json:
         cache: false
   evaluate:
     cmd: python src/evaluate.py

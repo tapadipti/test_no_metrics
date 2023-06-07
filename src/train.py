@@ -1,6 +1,6 @@
 import json, os
 
-METRICS_FILE = os.path.join("metrics.json")
+METRICS_FILE = os.path.join("metrics_train.json")
 metrics_dict = {"loss": 0.3043525516986847, "accuracy": 0.8895000219345093}
 
 
