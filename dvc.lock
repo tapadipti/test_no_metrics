@@ -38,8 +38,8 @@ stages:
     cmd: python src/stage3.py
     deps:
     - path: src/stage3.py
-      md5: f80dc1eb1270879ce8992f5fca20546b
-      size: 270
+      md5: 7f5fe312cfb81e436ed418be0e3215e3
+      size: 240
     params:
       params.yaml:
         train.batch_size: 128
@@ -49,5 +49,5 @@ stages:
         train.num_epochs: 3
     outs:
     - path: stage3_metrics.json
-      md5: 800e77afcd82d94ed5000cbb344cf337
-      size: 60
+      md5: 22867fe6b9c1173f093cd6d907495894
+      size: 30
