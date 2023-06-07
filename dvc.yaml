@@ -1,0 +1,14 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - src/train.py
+    params:
+    - train.batch_size
+    - train.dropout
+    - train.hidden_units
+    - train.lr
+    - train.num_epochs
+    metrics:
+    - countries.csv:
+        cache: false

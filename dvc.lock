@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: src/train.py
+      md5: 06078be99ca3593c04bf88c14f0c6028
+      size: 474
+    params:
+      params.yaml:
+        train.batch_size: 128
+        train.dropout: 0.4
+        train.hidden_units: 64
+        train.lr: 0.01
+        train.num_epochs: 3
+    outs:
+    - path: countries.csv
+      md5: ff4ba4b5d7bae856f212bf5328bc8cd2
+      size: 155
